@@ -422,7 +422,7 @@ async function verify(
 			modality: 'image',
 			unverifiedPayload: {
 				iss: 'https://api.privately.swiss',
-				sub: '1024',
+				sub: jwtPayload.sub,
 				aud: 'https://api.k-id.com',
 				exp: jwtPayload.exp,
 				nbf: jwtPayload.nbf,
@@ -516,7 +516,7 @@ async function verify(
 				},
 				screenAttackMeasure: 0,
 				screenAttackBoundingBox: {},
-				subclient: '1024',
+				subclient: jwtPayload.sub,
 				verificationID: jwtPayload.vid,
 				version: 'v1.10.22',
 				sdk_path: './face-capture-v1.10.22.js',
